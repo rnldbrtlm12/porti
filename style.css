@@ -73,8 +73,8 @@
   
   /* Profile Image */
 .profile-pic {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   object-position: top;
   border-radius: 50%;
