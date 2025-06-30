@@ -5,68 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ronald Bartolome - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .profile-pic {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      object-position: top;
-      border-radius: 50%;
-      display: block;
-      margin: 1rem auto;
-    }
-
-    .bio-points {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-    }
-
-    .social-links {
-      margin-top: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-    }
-
-    .social-links a {
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      background-color: #333;
-      color: white;
-      transition: background-color 0.3s;
-    }
-
-    .social-links a:hover {
-      background-color: #555;
-    }
-  </style>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-yH3QvKpFYRhkR5nh0vz0r1sL2o8dLgb7+RdsNStP6nI39UWxqVuAFbnEqqMOb8MKGG9VVOBEc3ApRugzYH6E2g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
+  <div class="waves-bg"></div>
+
   <header class="fade-in">
-    <h1>Ronald Bartolome</h1>
+    <div class="hero-container">
+      <img src="pPhoto.jpeg" alt="Ronald Bartolome" class="hero-pic" />
+      <div class="hero-text">
+        <h1>Ronald Bartolome</h1>
+        <p class="tagline">Computer Engineering Student • Tech & Innovation Enthusiast</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/rnldbrtlm12" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </a>
+          <a href="https://www.instagram.com/nldbrrt/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+          <a href="https://www.linkedin.com/in/ronald-bartolome-36b956330/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+    <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
     <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
     </nav>
   </header>
-
-  <section id="about" class="fade-in">
-    <h2>About Me</h2>
-    <img src="pPhoto.jpeg" alt="Ronald Bartolome" class="profile-pic" />
-    <ul class="bio-points">
-      <li>22 years old</li>
-      <li>From Navotas City</li>
-      <li>Computer Engineering student at TIP Manila</li>
-      <li>Interested in tech, coding, and innovation</li>
-    </ul>
-    <div class="social-links">
-      <a href="https://facebook.com/" target="_blank">Facebook</a>
-      <a href="https://instagram.com/" target="_blank">Instagram</a>
-      <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
-    </div>
-  </section>
 
   <section id="projects" class="fade-in">
     <h2>Projects</h2>
@@ -90,5 +62,22 @@
   <footer>
     <p>© 2025 Ronald Bartolome</p>
   </footer>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'light') {
+      body.classList.add('light');
+      toggle.textContent = '🌙';
+    }
+
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('light');
+      const isLight = body.classList.contains('light');
+      toggle.textContent = isLight ? '🌙' : '☀️';
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+  </script>
 </body>
 </html>
