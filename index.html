@@ -5,6 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ronald Bartolome - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 50%;
+      display: block;
+      margin: 1rem auto;
+    }
+
+    .bio-points {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+
+    .social-links {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      background-color: #333;
+      color: white;
+      transition: background-color 0.3s;
+    }
+
+    .social-links a:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
 <body>
   <header class="fade-in">
@@ -19,9 +55,18 @@
   <section id="about" class="fade-in">
     <h2>About Me</h2>
     <img src="pPhoto.jpeg" alt="Ronald Bartolome" class="profile-pic" />
-    <p>I'm a Ronald Bartolome, 22 years old, Living in Navotas City, and I'm a Computer Engineering student at TIP - Manila. Passionate about tech, coding, and innovation.</p>
+    <ul class="bio-points">
+      <li>22 years old</li>
+      <li>From Navotas City</li>
+      <li>Computer Engineering student at TIP Manila</li>
+      <li>Interested in tech, coding, and innovation</li>
+    </ul>
+    <div class="social-links">
+      <a href="https://facebook.com/" target="_blank">Facebook</a>
+      <a href="https://instagram.com/" target="_blank">Instagram</a>
+      <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+    </div>
   </section>
-  
 
   <section id="projects" class="fade-in">
     <h2>Projects</h2>
@@ -32,7 +77,7 @@
       </li>
       <li>
         <h3>Roboflow Car Body Types Classifier</h3>
-        <p>An application of roboflow that shows you the body type of a car by using your smartphone's camera.</p>
+        <p>An application that identifies car body types using your smartphone camera.</p>
       </li>
     </ul>
   </section>
