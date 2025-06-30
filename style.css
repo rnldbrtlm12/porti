@@ -72,14 +72,13 @@
   }
   
   /* Profile Image */
-  .profile-pic {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #00ff80;
-    margin-bottom: 1rem;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+
   }
   
   /* Projects */
